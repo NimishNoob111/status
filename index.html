@@ -134,6 +134,9 @@
             max-width: 1000px;
             margin: 60px auto 100px auto;
             padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Added spacing between elements */
         }
 
         .global-banner {
@@ -144,7 +147,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 40px;
             backdrop-filter: blur(8px);
         }
 
@@ -319,7 +321,7 @@
             <div class="node-header">
                 <div class="node-title">
                     <span class="flag-icon">🇮🇳</span>
-                    <h3>Indian Node</h3>
+                    <h3>Indian Node 1 (Intel)</h3>
                 </div>
                 <div class="operational-badge">Operational</div>
             </div>
@@ -367,19 +369,88 @@
             <div class="metrics-grid">
                 <div class="metric-box">
                     <label>CPU Usage</label>
-                    <div class="metric-value" id="nodeCpu">24.2<span>%</span></div>
+                    <div class="metric-value" id="nodeCpu1">24.2<span>%</span></div>
                 </div>
                 <div class="metric-box">
                     <label>RAM Allocated</label>
-                    <div class="metric-value" id="nodeRam">16<span>/ 64 GB</span></div>
+                    <div class="metric-value" id="nodeRam1">16<span>/ 64 GB</span></div>
                 </div>
                 <div class="metric-box">
                     <label>Disk NVMe</label>
-                    <div class="metric-value" id="nodeDisk">20<span>/ 200 GB</span></div>
+                    <div class="metric-value" id="nodeDisk1">20<span>/ 200 GB</span></div>
                 </div>
                 <div class="metric-box">
                     <label>Network Link</label>
-                    <div class="metric-value" id="nodeNet">1.1<span>Gbps</span></div>
+                    <div class="metric-value" id="nodeNet1">1.1<span>Gbps</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="node-card">
+            <div class="node-header">
+                <div class="node-title">
+                    <span class="flag-icon">🇮🇳</span>
+                    <h3>Indian Node 2 (AMD EPYC NEW!)</h3>
+                </div>
+                <div class="operational-badge">Operational</div>
+            </div>
+
+            <div class="uptime-section">
+                <div class="uptime-bar-container">
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                    <div class="uptime-pill" title="100% operational"></div>
+                </div>
+                <div class="uptime-labels">
+                    <span>30 Days Ago</span>
+                    <span style="color: #4ade80; font-weight: 700;">100.0% Uptime</span>
+                    <span>Today</span>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <label>CPU Usage</label>
+                    <div class="metric-value" id="nodeCpu2">18.5<span>%</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>RAM Allocated</label>
+                    <div class="metric-value" id="nodeRam2">0<span>/ 20 GB</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Disk NVMe</label>
+                    <div class="metric-value" id="nodeDisk2">0<span>/ 100 GB</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Network Link</label>
+                    <div class="metric-value" id="nodeNet2">1.3<span>Gbps</span></div>
                 </div>
             </div>
         </div>
@@ -397,15 +468,28 @@
 
         // Simulates slight node variations every couple seconds so resource tracking looks real
         setInterval(() => {
-            const cpuElement = document.getElementById('nodeCpu');
-            const netElement = document.getElementById('nodeNet');
+            // Elements for Node 1
+            const cpu1Element = document.getElementById('nodeCpu1');
+            const net1Element = document.getElementById('nodeNet1');
             
-            // Random fluctuations around standard operational averages
-            const randomCpu = (20 + Math.random() * 15).toFixed(1);
-            const randomNet = (0.8 + Math.random() * 0.5).toFixed(1);
+            // Elements for Node 2
+            const cpu2Element = document.getElementById('nodeCpu2');
+            const net2Element = document.getElementById('nodeNet2');
 
-            cpuElement.innerHTML = `${randomCpu}<span>%</span>`;
-            netElement.innerHTML = `${randomNet}<span>Gbps</span>`;
+            // Fluctuations for Node 1
+            const randomCpu1 = (20 + Math.random() * 15).toFixed(1);
+            const randomNet1 = (0.8 + Math.random() * 0.5).toFixed(1);
+
+            // Fluctuations for Node 2
+            const randomCpu2 = (15 + Math.random() * 18).toFixed(1);
+            const randomNet2 = (0.9 + Math.random() * 0.6).toFixed(1);
+
+            // Update UI
+            cpu1Element.innerHTML = `${randomCpu1}<span>%</span>`;
+            net1Element.innerHTML = `${randomNet1}<span>Gbps</span>`;
+
+            cpu2Element.innerHTML = `${randomCpu2}<span>%</span>`;
+            net2Element.innerHTML = `${randomNet2}<span>Gbps</span>`;
         }, 3000);
     </script>
 </body>
