@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostNodes - Network Status</title>
+    
+    <link rel="icon" type="image/jpeg" href="WhatsApp Image 2026-05-25 at 18.12.46 (2) (1).jpeg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="preloader"><div class="spinner"></div></div>
+
+    <div class="bg-animation-layer">
+        <video autoplay muted loop playsinline id="bgVideo" preload="auto">
+            <source src="vidssave.com Minecraft Amazing Shaders Cinematic _ Complementary Reimagined + Another Vanilla PBR _ 4K 60FPS 480P.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <a href="#" class="logo">
+            <img src="WhatsApp Image 2026-05-25 at 18.12.46 (2) (1).jpeg" alt="Logo">
+            Ghost<span>Nodes</span>
+        </a>
+        <a href="https://home.ghostsmc.in/" class="back-btn">Portal Home</a>
+    </header>
+
+    <div class="status-container">
+        <div class="page-title">
+            <h1>System Status</h1>
+            <p>Live status metrics of global operational server clusters.</p>
+        </div>
+
+        <div class="global-banner">
+            <div class="pulse-dot"></div>
+            <div>
+                <h2>All Systems Operational</h2>
+                <p>Systems are monitored closely around the clock. No issues identified.</p>
+            </div>
+        </div>
+
+        <div class="region-label">Asia-Pacific Servers</div>
+
+        <div class="node-card new-node">
+            <div class="node-header">
+                <div class="node-title">
+                    <span class="flag-icon">🇮🇳</span>
+                    <div>
+                        <h3>BOM-01 Cluster <span class="new-badge">Primary</span></h3>
+                        <p class="node-subtitle">Mumbai, India — Core Proxy & Compute Node</p>
+                    </div>
+                </div>
+                <div class="operational-badge">Operational</div>
+            </div>
+            <div class="uptime-section">
+                <div class="uptime-bar-container">
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                </div>
+                <div class="uptime-labels">
+                    <span>30 days ago</span>
+                    <span>Uptime: <span class="uptime-pct">100%</span></span>
+                    <span>Today</span>
+                </div>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <label>CPU Load</label>
+                    <div class="metric-value" id="nodeCpu1">24<span>%</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Network</label>
+                    <div class="metric-value" id="nodeNet1">1.2<span>Gbps</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Ping Latency</label>
+                    <div class="metric-value">4<span>ms</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>RAM Usage</label>
+                    <div class="metric-value">14.2<span>GB</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="node-card">
+            <div class="node-header">
+                <div class="node-title">
+                    <span class="flag-icon">🇮🇳</span>
+                    <div>
+                        <h3>BOM-02 Cluster</h3>
+                        <p class="node-subtitle">Mumbai, India — Object Storage & Database Node</p>
+                    </div>
+                </div>
+                <div class="operational-badge">Operational</div>
+            </div>
+            <div class="uptime-section">
+                <div class="uptime-bar-container">
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                </div>
+                <div class="uptime-labels">
+                    <span>30 days ago</span>
+                    <span>Uptime: <span class="uptime-pct">100%</span></span>
+                    <span>Today</span>
+                </div>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <label>CPU Load</label>
+                    <div class="metric-value" id="nodeCpu2">18<span>%</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Network</label>
+                    <div class="metric-value" id="nodeNet2">0.9<span>Gbps</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Ping Latency</label>
+                    <div class="metric-value">5<span>ms</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>RAM Usage</label>
+                    <div class="metric-value">8.7<span>GB</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="node-card">
+            <div class="node-header">
+                <div class="node-title">
+                    <span class="flag-icon">🇸🇬</span>
+                    <div>
+                        <h3>SIN-01 Cluster</h3>
+                        <p class="node-subtitle">Singapore — Edge Route & CDN Node</p>
+                    </div>
+                </div>
+                <div class="operational-badge">Operational</div>
+            </div>
+            <div class="uptime-section">
+                <div class="uptime-bar-container">
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                </div>
+                <div class="uptime-labels">
+                    <span>30 days ago</span>
+                    <span>Uptime: <span class="uptime-pct">100%</span></span>
+                    <span>Today</span>
+                </div>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <label>CPU Load</label>
+                    <div class="metric-value" id="nodeCpu3">22<span>%</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Network</label>
+                    <div class="metric-value" id="nodeNet3">1.1<span>Gbps</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Ping Latency</label>
+                    <div class="metric-value">28<span>ms</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>RAM Usage</label>
+                    <div class="metric-value">11.1<span>GB</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="region-label">North American Servers</div>
+
+        <div class="node-card">
+            <div class="node-header">
+                <div class="node-title">
+                    <span class="flag-icon">🇺🇸</span>
+                    <div>
+                        <h3>SJC-01 Cluster</h3>
+                        <p class="node-subtitle">San Jose, USA — Backhaul Backup & Analytics Node</p>
+                    </div>
+                </div>
+                <div class="operational-badge">Operational</div>
+            </div>
+            <div class="uptime-section">
+                <div class="uptime-bar-container">
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                    <div class="uptime-pill" title="100% Uptime"></div>
+                </div>
+                <div class="uptime-labels">
+                    <span>30 days ago</span>
+                    <span>Uptime: <span class="uptime-pct">100%</span></span>
+                    <span>Today</span>
+                </div>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <label>CPU Load</label>
+                    <div class="metric-value" id="nodeCpu4">14<span>%</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Network</label>
+                    <div class="metric-value" id="nodeNet4">2.1<span>Gbps</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>Ping Latency</label>
+                    <div class="metric-value">142<span>ms</span></div>
+                </div>
+                <div class="metric-box">
+                    <label>RAM Usage</label>
+                    <div class="metric-value">19.4<span>GB</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Last checked: <span id="lastChecked" style="color:white; font-weight:600;">--:--:--</span> &nbsp;·&nbsp; Powered by <a href="https://home.ghostsmc.in/">home.ghostsmc.in</a> &nbsp;·&nbsp; All systems nominal</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => preloader.classList.add('fade-out'), 500);
+            
+            // Critical Video Force Load Action
+            const video = document.getElementById('bgVideo');
+            if (video) {
+                video.muted = true;
+                video.play().catch(function(error) {
+                    console.log("Autoplay context triggered fallback policy: ", error);
+                });
+            }
+
+            function updateTime() {
+                document.getElementById('lastChecked').textContent = new Date().toLocaleTimeString();
+            }
+            updateTime();
+            setInterval(updateTime, 30000);
+        });
+
+        // Dynamic status bar ticker logic
+        setInterval(() => {
+            const updates = [
+                { cpu: 'nodeCpu1', net: 'nodeNet1', cpuRange: [20,35], netRange: [0.8,1.4] },
+                { cpu: 'nodeCpu2', net: 'nodeNet2', cpuRange: [15,33], netRange: [0.9,1.6] },
+                { cpu: 'nodeCpu3', net: 'nodeNet3', cpuRange: [18,30], netRange: [0.7,1.2] },
+                { cpu: 'nodeCpu4', net: 'nodeNet4', cpuRange: [12,28], netRange: [1.8,2.8] },
+            ];
+            updates.forEach(u => {
+                const cpuEl = document.getElementById(u.cpu);
+                const netEl = document.getElementById(u.net);
+                if (cpuEl) cpuEl.innerHTML = Math.floor(u.cpuRange[0] + Math.random() * (u.cpuRange[1] - u.cpuRange[0])) + '<span>%</span>';
+                if (netEl) netEl.innerHTML = (u.netRange[0] + Math.random() * (u.netRange[1] - u.netRange[0])).toFixed(1) + '<span>Gbps</span>';
+            });
+        }, 3000);
+    </script>
+</body>
+</html>
